@@ -1,0 +1,11 @@
+{
+  "name": "CounterBookmarkletBuilder",
+  "version": "0.0.1",
+  "author": "Steven Bone",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  }
+}
