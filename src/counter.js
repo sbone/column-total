@@ -1,9 +1,11 @@
 // $(document).ready(function() {
 
-  // (function() {
+//   (function() {
 
+// from http://benalman.com/code/javascript/jquery/jquery.ba-run-code-bookmarklet.js
+// UNMINIFED
 
-n( window, document, req_version, callback, $, script, done, readystate ){
+(function( window, document, req_version, callback, $, script, done, readystate ){
 
   // If jQuery isn't loaded, or is a lower version than specified, load the
   // specified version and call the callback, otherwise just call the callback.
@@ -44,6 +46,7 @@ n( window, document, req_version, callback, $, script, done, readystate ){
   function( $, L ) {
     '$:nomunge, L:nomunge'; // Used by YUI compressor.
 
+    // count widget code
     // insert lil' div with count and reset button
     $('body').prepend('<div class="cw__container"><h1 class="cw__header">Total: <span class="cw__total">0</span></h1><button class="reset-total">Reset Total</button></div>');
 
@@ -113,4 +116,4 @@ n( window, document, req_version, callback, $, script, done, readystate ){
 
   }());
 
-});
+// });
