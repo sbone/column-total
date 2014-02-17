@@ -21,7 +21,8 @@ $(document).ready(function() {
       'right': '0',
       'color': '#fff',
       'border-radius': '0 0 0 10px',
-      'background': 'rgba(0, 0, 0, .5)'
+      'background': 'rgba(0, 0, 0, .5)',
+      'z-index': '9999'
     });
 
     headerEl.css({
@@ -47,6 +48,11 @@ $(document).ready(function() {
       } else if (!isNaN(target)) {
         total = total + target;
         updateTotal();
+
+        // mark added number as such
+        $(e.target).css({
+          'text-decoration': 'line-through'
+        });
       }
 
       oldOffset = targetOffset;
