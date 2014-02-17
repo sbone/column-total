@@ -2,32 +2,25 @@ module.exports = function(grunt){
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    concat: {
-      options: {
-        separator: ''
-      },
-      dist: {
-        src: ['src/counter.js'],
-        dest: 'js/script.js'
-      }
-    },
     uglify: {
+      options: {
+        mangle: false
+      },
       build: {
         files: {
-          'js/script.js': ['<%= concat.dist.dest %>']
+          'bookmarklet.js': ['js/script.js']
         }
       }
     },
     watch: {
       scripts: {
         files: 'src/*.js',
-        tasks: ['concat', 'uglify']
+        tasks: ['uglify']
       }
     }
   });
 
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['uglify']);
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
 };
