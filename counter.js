@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     // setup total, elements
     var total = 0,
+        oldOffset = 0,
         counterEl = $('.cw__container'),
         headerEl = $('.cw__header'),
         totalEl = $('.cw__total');
@@ -37,12 +38,19 @@ $(document).ready(function() {
 
     // get input numbers that you click on
     $('body').on('click', function(e) {
-      var target = parseFloat($(e.target).html());
+      var target = parseFloat($(e.target).html()),
+          // detect clicking on the same element, don't allow
+          targetOffset = e.toElement.offsetTop;
 
-      if (!isNaN(target)) {
+      if (targetOffset === oldOffset) {
+        console.log("Nope, same element")
+      } else if (!isNaN(target)) {
         total = total + target;
         updateTotal();
       }
+
+      oldOffset = targetOffset;
+
     });
 
     // reset button resets total

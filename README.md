@@ -16,3 +16,5 @@ It's not robust, and is currently just made to handle numbers in tables.
 * working demo page
 * toggable history (show which numbers are added together)
 * bookmarklet builder
+* change mouse cursor on clickable/addable elements?
+
