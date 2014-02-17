@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  window.counter = (function() {
+  (function() {
 
     // insert lil' div with count and reset button
     $('body').prepend('<div class="cw__container"><h1 class="cw__header">Total: <span class="cw__total">0</span></h1><button class="reset-total">Reset Total</button></div>');
@@ -37,7 +37,6 @@ $(document).ready(function() {
 
     // get input numbers that you click on
     $('body').on('click', function(e) {
-      console.log(e);
       var target = parseFloat($(e.target).html());
 
       if (!isNaN(target)) {
