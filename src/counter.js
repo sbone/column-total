@@ -38,7 +38,7 @@
 })( window, document,
 
   // Minimum jQuery version required. Change this as-needed.
-  '1.3.2',
+  '1.7.0',
 
   // Your jQuery code goes inside this callback. $ refers to the jQuery object,
   // and L is a boolean that indicates whether or not an external jQuery file
